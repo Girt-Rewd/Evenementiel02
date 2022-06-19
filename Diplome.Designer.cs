@@ -152,19 +152,19 @@
             this.modifierToolStripMenuItem,
             this.supprimerToolStripMenuItem});
             this.ctxListView.Name = "ctxListView";
-            this.ctxListView.Size = new System.Drawing.Size(181, 70);
+            this.ctxListView.Size = new System.Drawing.Size(130, 48);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.ModifierToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.SupprimerToolStripMenuItem_Click);
             // 
@@ -177,7 +177,7 @@
             this.btnChercher.TabIndex = 3;
             this.btnChercher.Text = "Chercher";
             this.btnChercher.UseVisualStyleBackColor = true;
-            this.btnChercher.Click += new System.EventHandler(this.BtnSupprimer_Click);
+            this.btnChercher.Click += new System.EventHandler(this.btnChercher_Click);
             // 
             // btnEnregistrer
             // 
