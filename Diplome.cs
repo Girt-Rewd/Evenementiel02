@@ -110,7 +110,8 @@ namespace Evenementiel01
 
         private void btnAfficher_Click(object sender, EventArgs e)
         {
-            string etab = dgvDiplome.Rows[0].Cells[1].Value.ToString();
+            int indice = dgvDiplome.SelectedRows[0].Index;
+            string etab = dgvDiplome.Rows[indice].Cells[1].Value.ToString();
             MessageBox.Show(etab);
         }
     }
