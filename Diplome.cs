@@ -108,5 +108,11 @@ namespace Evenementiel01
             saveList.Close();
         }
 
+        private void btnAfficher_Click(object sender, EventArgs e)
+        {
+            int indice = dgvDiplome.SelectedRows[0].Index;
+            string etab = dgvDiplome.Rows[indice].Cells[1].Value.ToString();
+            MessageBox.Show(etab);
+        }
     }
 }

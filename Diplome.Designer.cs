@@ -39,9 +39,9 @@ namespace Evenementiel01
             this.dTDiplome = new System.Windows.Forms.DateTimePicker();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.lsvDiplome = new System.Windows.Forms.ListView();
-            this.colDiplome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colEtablissement = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colAnnee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDiplome = new System.Windows.Forms.ColumnHeader();
+            this.colEtablissement = new System.Windows.Forms.ColumnHeader();
+            this.colAnnee = new System.Windows.Forms.ColumnHeader();
             this.ctxListView = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +51,7 @@ namespace Evenementiel01
             this.colDiplomes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEtablissements = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAnnees = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAfficher = new System.Windows.Forms.Button();
             this.ctxListView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiplome)).BeginInit();
             this.SuspendLayout();
@@ -58,56 +59,63 @@ namespace Evenementiel01
             // lblDiplome
             // 
             this.lblDiplome.AutoSize = true;
-            this.lblDiplome.Location = new System.Drawing.Point(45, 38);
+            this.lblDiplome.Location = new System.Drawing.Point(52, 44);
+            this.lblDiplome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDiplome.Name = "lblDiplome";
-            this.lblDiplome.Size = new System.Drawing.Size(54, 13);
+            this.lblDiplome.Size = new System.Drawing.Size(61, 15);
             this.lblDiplome.TabIndex = 0;
             this.lblDiplome.Text = "Diplôme : ";
             // 
             // lblEtablissement
             // 
             this.lblEtablissement.AutoSize = true;
-            this.lblEtablissement.Location = new System.Drawing.Point(45, 86);
+            this.lblEtablissement.Location = new System.Drawing.Point(52, 99);
+            this.lblEtablissement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEtablissement.Name = "lblEtablissement";
-            this.lblEtablissement.Size = new System.Drawing.Size(81, 13);
+            this.lblEtablissement.Size = new System.Drawing.Size(89, 15);
             this.lblEtablissement.TabIndex = 0;
             this.lblEtablissement.Text = "Établissement : ";
             // 
             // lblAnneeObtention
             // 
             this.lblAnneeObtention.AutoSize = true;
-            this.lblAnneeObtention.Location = new System.Drawing.Point(45, 137);
+            this.lblAnneeObtention.Location = new System.Drawing.Point(52, 158);
+            this.lblAnneeObtention.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAnneeObtention.Name = "lblAnneeObtention";
-            this.lblAnneeObtention.Size = new System.Drawing.Size(100, 13);
+            this.lblAnneeObtention.Size = new System.Drawing.Size(112, 15);
             this.lblAnneeObtention.TabIndex = 0;
             this.lblAnneeObtention.Text = "Année d’obtention :";
             // 
             // txtDiplome
             // 
-            this.txtDiplome.Location = new System.Drawing.Point(163, 35);
+            this.txtDiplome.Location = new System.Drawing.Point(190, 40);
+            this.txtDiplome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDiplome.Name = "txtDiplome";
-            this.txtDiplome.Size = new System.Drawing.Size(231, 20);
+            this.txtDiplome.Size = new System.Drawing.Size(269, 23);
             this.txtDiplome.TabIndex = 1;
             // 
             // txtEtablissement
             // 
-            this.txtEtablissement.Location = new System.Drawing.Point(163, 84);
+            this.txtEtablissement.Location = new System.Drawing.Point(190, 97);
+            this.txtEtablissement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEtablissement.Name = "txtEtablissement";
-            this.txtEtablissement.Size = new System.Drawing.Size(231, 20);
+            this.txtEtablissement.Size = new System.Drawing.Size(269, 23);
             this.txtEtablissement.TabIndex = 1;
             // 
             // dTDiplome
             // 
-            this.dTDiplome.Location = new System.Drawing.Point(163, 132);
+            this.dTDiplome.Location = new System.Drawing.Point(190, 152);
+            this.dTDiplome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dTDiplome.Name = "dTDiplome";
-            this.dTDiplome.Size = new System.Drawing.Size(231, 20);
+            this.dTDiplome.Size = new System.Drawing.Size(269, 23);
             this.dTDiplome.TabIndex = 2;
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(435, 35);
+            this.btnAjouter.Location = new System.Drawing.Point(507, 40);
+            this.btnAjouter.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(106, 38);
+            this.btnAjouter.Size = new System.Drawing.Size(124, 44);
             this.btnAjouter.TabIndex = 3;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
@@ -122,10 +130,10 @@ namespace Evenementiel01
             this.lsvDiplome.ContextMenuStrip = this.ctxListView;
             this.lsvDiplome.FullRowSelect = true;
             this.lsvDiplome.GridLines = true;
-            this.lsvDiplome.HideSelection = false;
-            this.lsvDiplome.Location = new System.Drawing.Point(37, 219);
+            this.lsvDiplome.Location = new System.Drawing.Point(43, 253);
+            this.lsvDiplome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lsvDiplome.Name = "lsvDiplome";
-            this.lsvDiplome.Size = new System.Drawing.Size(504, 218);
+            this.lsvDiplome.Size = new System.Drawing.Size(587, 251);
             this.lsvDiplome.TabIndex = 4;
             this.lsvDiplome.UseCompatibleStateImageBehavior = false;
             this.lsvDiplome.View = System.Windows.Forms.View.Details;
@@ -169,9 +177,10 @@ namespace Evenementiel01
             // 
             // btnChercher
             // 
-            this.btnChercher.Location = new System.Drawing.Point(435, 79);
+            this.btnChercher.Location = new System.Drawing.Point(507, 91);
+            this.btnChercher.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnChercher.Name = "btnChercher";
-            this.btnChercher.Size = new System.Drawing.Size(106, 38);
+            this.btnChercher.Size = new System.Drawing.Size(124, 44);
             this.btnChercher.TabIndex = 3;
             this.btnChercher.Text = "Chercher";
             this.btnChercher.UseVisualStyleBackColor = true;
@@ -179,9 +188,10 @@ namespace Evenementiel01
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(435, 175);
+            this.btnEnregistrer.Location = new System.Drawing.Point(507, 202);
+            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(106, 38);
+            this.btnEnregistrer.Size = new System.Drawing.Size(124, 44);
             this.btnEnregistrer.TabIndex = 3;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
@@ -194,9 +204,10 @@ namespace Evenementiel01
             this.colDiplomes,
             this.colEtablissements,
             this.colAnnees});
-            this.dgvDiplome.Location = new System.Drawing.Point(561, 219);
+            this.dgvDiplome.Location = new System.Drawing.Point(654, 253);
+            this.dgvDiplome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvDiplome.Name = "dgvDiplome";
-            this.dgvDiplome.Size = new System.Drawing.Size(459, 218);
+            this.dgvDiplome.Size = new System.Drawing.Size(476, 252);
             this.dgvDiplome.TabIndex = 5;
             // 
             // colDiplomes
@@ -214,11 +225,22 @@ namespace Evenementiel01
             this.colAnnees.HeaderText = "Année d’obtention";
             this.colAnnees.Name = "colAnnees";
             // 
+            // btnAfficher
+            // 
+            this.btnAfficher.Location = new System.Drawing.Point(1006, 202);
+            this.btnAfficher.Name = "btnAfficher";
+            this.btnAfficher.Size = new System.Drawing.Size(124, 44);
+            this.btnAfficher.TabIndex = 6;
+            this.btnAfficher.Text = "Afficher";
+            this.btnAfficher.UseVisualStyleBackColor = true;
+            this.btnAfficher.Click += new System.EventHandler(this.btnAfficher_Click);
+            // 
             // Diplome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 457);
+            this.ClientSize = new System.Drawing.Size(1204, 527);
+            this.Controls.Add(this.btnAfficher);
             this.Controls.Add(this.dgvDiplome);
             this.Controls.Add(this.lsvDiplome);
             this.Controls.Add(this.btnEnregistrer);
@@ -230,6 +252,7 @@ namespace Evenementiel01
             this.Controls.Add(this.lblAnneeObtention);
             this.Controls.Add(this.lblEtablissement);
             this.Controls.Add(this.lblDiplome);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Diplome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -262,5 +285,6 @@ namespace Evenementiel01
         private DataGridViewTextBoxColumn colDiplomes;
         private DataGridViewTextBoxColumn colEtablissements;
         private DataGridViewTextBoxColumn colAnnees;
+        private Button btnAfficher;
     }
 }
