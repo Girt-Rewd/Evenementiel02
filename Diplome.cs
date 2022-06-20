@@ -108,5 +108,10 @@ namespace Evenementiel01
             saveList.Close();
         }
 
+        private void btnAfficher_Click(object sender, EventArgs e)
+        {
+            string etab = dgvDiplome.Rows[0].Cells[1].Value.ToString();
+            MessageBox.Show(etab);
+        }
     }
 }
